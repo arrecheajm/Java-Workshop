@@ -1,5 +1,7 @@
 package vet_office;
 
-public class Cat {
+public class Cat extends Pet {
+
+	
 
 }

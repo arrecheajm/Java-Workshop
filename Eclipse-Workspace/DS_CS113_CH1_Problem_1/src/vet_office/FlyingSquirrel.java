@@ -1,5 +1,7 @@
 package vet_office;
 
-public class FlyingSquirrel {
+public class FlyingSquirrel extends Pet {
+
+	
 
 }
