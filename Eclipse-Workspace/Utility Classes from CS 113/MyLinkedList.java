@@ -53,7 +53,7 @@ public class MyLinkedList<T> implements List {
 		 */
 		public MyIterator(int i){
 			if (i < 0 || i > size) {
-				throw new IndexOutOfBoundsException("Invalid index "+i);
+				throw new IndexOutOfBoundsException("Invalid index: "+i);
 			}
 			lastItemReturned = null;
 			if (i == size) {

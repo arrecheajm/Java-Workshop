@@ -110,6 +110,9 @@ public class Utility
 
 	//ARRAY METHODS (feel free to document rest of methods as they are
 	//documented above as an exercise to practice the way we document in this course!)
+	/**
+	 * @param original
+	 */
 	public static void printArray(double[] original)
 	{
         for(int i = 0; i < original.length; i++)
@@ -117,6 +120,10 @@ public class Utility
             System.out.printf("#%2d = %f%n", (i+1), original[i]);
         }
 	}
+    /**
+     * @param original
+     * @param val
+     */
     public static void initializeArray(double[] original, double val)
     {
         for(int i = 0; i < original.length; i++)
@@ -125,6 +132,10 @@ public class Utility
         }
     }
 
+    /**
+     * @param original
+     * @return
+     */
     public static double[] copyArray(double[] original)
     {
         double[] copy;
@@ -138,6 +149,9 @@ public class Utility
         return copy;
     }
 
+	/**
+	 * @param original
+	 */
 	public static void printArray(int[] original)
 	{
         for(int i = 0; i < original.length; i++)
@@ -146,6 +160,10 @@ public class Utility
         }
 	}
 	
+    /**
+     * @param original
+     * @param val
+     */
     public static void initializeArray(int[] original, int val)
     {
         for(int i = 0; i < original.length; i++)
@@ -154,6 +172,10 @@ public class Utility
         }
     }
 	
+    /**
+     * @param original
+     * @return
+     */
     public static int[] copyArray(int[] original)
     {
         int[] copy;
@@ -167,6 +189,11 @@ public class Utility
         return copy;
     }
 
+	/**
+	 * @param first
+	 * @param second
+	 * @return
+	 */
 	public static boolean arraysAreEqual(double[] first, double[] second)
 	{
 		int i;
@@ -193,6 +220,11 @@ public class Utility
 		return result;
 	}
 	
+	/**
+	 * @param first
+	 * @param second
+	 * @return
+	 */
 	public static boolean arraysAreEqual(int[] first, int[] second)
 	{
 		int i;
@@ -256,6 +288,9 @@ public class Utility
 		}while (isNotValid);
 		return false;
 	}
+	/**
+	 * 
+	 */
 	public static void clearConsole(){
 		System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	}
