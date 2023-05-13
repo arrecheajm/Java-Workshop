@@ -1,4 +1,4 @@
-package user_classes;
+package package_model;
 
 import java.util.Date;
 

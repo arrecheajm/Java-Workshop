@@ -1,4 +1,4 @@
-package user_classes;
+package package_model;
 
 public class Invalid_Food_Entry_Value_Exception extends Exception {
 

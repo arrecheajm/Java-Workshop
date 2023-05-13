@@ -1,4 +1,4 @@
-package user_classes;
+package package_model;
 
 /**
  * Class contains a collection of Food Items that make up a food group.

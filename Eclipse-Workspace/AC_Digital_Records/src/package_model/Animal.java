@@ -1,4 +1,4 @@
-package user_classes;
+package package_model;
 
 /**
  * Contains animal data including ID data, diet information and log, Notes and daily tasks
