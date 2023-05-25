@@ -1,8 +1,8 @@
 package package_model;
 
 /**
- * A food entry for a particular food item. Entries have a value (name) and frequency String.
- * Frequency can be one of three values: Normal, low, rare. Also contains boolean to show if it entry
+ * A food entry for a particular food item. Entries have a name (name) and frequency String.
+ * Frequency can be one of three names: Normal, low, rare. Also contains boolean to show if it entry
  * is isSelected or not.
  * @author jma_u
  *
@@ -13,45 +13,56 @@ public class Food_Entry {
 	public static final String LOW_FREQUENCY = "Low";
 	public static final String RARE_FREQUENCY = "Rare";
 	
-	private String value;
+	private String name;
 	private String frequency;
 	private boolean isSelected;
 	
 	/****** CONSTRUCTORS ******/
+	
 	/**
-	 * Creates a new Food_Entry object with given value, default frequency and isSelected set to False.
-	 * @param value value to identify the entry.
-	 * @throws Invalid_Food_Entry_Value_Exception value cannot be null or empty. 
+	 * Creates a new Food_Entry object with given name, default frequency and isSelected set to False.
+	 * @param name name to identify the entry.
+	 * @throws Invalid_Food_Entry_name_Exception name cannot be null or empty. 
 	 */
-	Food_Entry(String value) throws Invalid_Food_Entry_Value_Exception{
-		setAll(value, DEFAULT_FREQUENCY, false);
+	public Food_Entry(String name) throws Invalid_Food_Entry_Name_Exception{
+		setAll(name, DEFAULT_FREQUENCY, false);
 	}
 	
 	/**
-	 * Creates a new Food_Entry object with given value and frequency. Frequency must match one of the preset values.
-	 * @param value value to identify the entry.
-	 * @param frequency frequency must match one of the preset values or will be set to default.
-	 * @throws Invalid_Food_Entry_Value_Exception value cannot be null or empty.
+	 * Creates a new Food_Entry object with given name and frequency. Frequency must match one of the preset names.
+	 * @param name name to identify the entry.
+	 * @param frequency frequency must match one of the preset names or will be set to default.
+	 * @throws Invalid_Food_Entry_name_Exception name cannot be null or empty.
 	 */
-	Food_Entry(String value, String frequency) throws Invalid_Food_Entry_Value_Exception{
-		setAll(value,frequency, false);
+	public Food_Entry(String name, String frequency) throws Invalid_Food_Entry_Name_Exception{
+		setAll(name,frequency, false);
+	}
+	
+	/**
+	 * Creates a new Food_Entry from a given Food_Entry object
+	 * @param otherEntry Food_Entry object to be copied
+	 * @throws Invalid_Food_Entry_Name_Exception name cannot be null or empty
+	 */
+	public Food_Entry(Food_Entry otherEntry) throws Invalid_Food_Entry_Name_Exception {
+		setAll(otherEntry.getName(),otherEntry.getFrequency(), otherEntry.getisSelected());
 	}
 		
 	/****** MUTATORS ******/
+	
 	/**
-	 * @param value  value to identify the entry.
-	 * @param frequency frequency must match one of the preset values or will be set to default.
+	 * @param name  name to identify the entry.
+	 * @param frequency frequency must match one of the preset names or will be set to default.
 	 * @param isSelected flag denoting selection.
-	 * @throws Invalid_Food_Entry_Value_Exception value cannot be null or empty.
+	 * @throws Invalid_Food_Entry_name_Exception name cannot be null or empty.
 	 */
-	public void setAll(String value, String frequency, boolean isSelected) throws Invalid_Food_Entry_Value_Exception {
-		setValue(value);
+	public void setAll(String name, String frequency, boolean isSelected) throws Invalid_Food_Entry_Name_Exception {
+		setName(name);
 		setFrequency(frequency);
 		setisSelected(isSelected);
 	}
 
 	/**
-	 * Sets the value of isSelected.
+	 * Sets the name of isSelected.
 	 * @param isSelected boolean denoting selection.
 	 */
 	public void setisSelected(boolean isSelected) {
@@ -59,40 +70,45 @@ public class Food_Entry {
 	}
 
 	/**
-	 * Sets the value of frequency.
-	 * @param frequency frequency must match one of the preset values or will be set to default.
+	 * Sets the name of frequency.
+	 * @param frequency frequency must match one of the preset names or will be set to default.
 	 */
 	public void setFrequency(String frequency) {
-		if (frequency == "Normal") {
+		if (frequency == NORMAL_FREQUENCY) {
 			this.frequency = NORMAL_FREQUENCY;
-		} else if (frequency == "Low") {
+		} else if (frequency == LOW_FREQUENCY) {
 			this.frequency = LOW_FREQUENCY;
-		} else if (frequency == "Rare") {
+		} else if (frequency == RARE_FREQUENCY) {
 			this.frequency = RARE_FREQUENCY;
 		} else {
 			this.frequency = DEFAULT_FREQUENCY;
 		}		
 	}	
 	/**
-	 * @param value value to identify the entry.
-	 * @throws Invalid_Food_Entry_Value_Exception value cannot be null or empty.
+	 * @param name name to identify the entry.
+	 * @throws Invalid_Food_Entry_name_Exception name cannot be null or empty.
 	 */
-	public void setValue(String value) throws Invalid_Food_Entry_Value_Exception {
-		String temp = value.strip();
-		
-		if (temp != null && temp != "") {
-			this.value = value;
+	public void setName(String name) throws Invalid_Food_Entry_Name_Exception {
+		String temp = name;
+		if (temp != null) {
+			temp = temp.strip();
+			if (temp != "") {
+				this.name = name;
+			} else {
+				throw new Invalid_Food_Entry_Name_Exception("Food Entry name cannot be empty");
+			}	
 		} else {
-			throw new Invalid_Food_Entry_Value_Exception("Food Entry value cannot be NULL or empty");
-		}		
+			throw new Invalid_Food_Entry_Name_Exception("Food Entry name cannot be NULL");
+		}			
 	}
 	
 	/****** ACCESSORS ******/
+	
 	/**
-	 * @return value variable as a String.
+	 * @return name variable as a String.
 	 */
-	public String getValue() {
-		return this.value;
+	public String getName() {
+		return this.name;
 	}
 	/**
 	 * @return frequency variable as a String.
@@ -108,10 +124,11 @@ public class Food_Entry {
 	}
 	
 	/****** UTILITY ******/
+	
 	/**
-	 *Returns a String containing values for all the Food_Entry Data.
+	 *Returns a String containing names for all the Food_Entry Data.
 	 */
 	public String toString() {
-		return "Entry value: "+this.value+" Frequency: "+this.frequency+" isisSelected? "+this.isSelected+"\n";
+		return "Entry name: "+this.name+" Frequency: "+this.frequency+" isSelected? "+this.isSelected;
 	}
 }

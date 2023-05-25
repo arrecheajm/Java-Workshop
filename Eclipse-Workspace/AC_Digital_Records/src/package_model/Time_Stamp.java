@@ -1,16 +1,16 @@
 package package_model;
 
 import java.sql.Timestamp;
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  * Class creates a TimeStamp with initials. TimeStamp cannot be edited after it is created
  * @author jma_u
  *
  */
+@SuppressWarnings("serial")
 public class Time_Stamp extends Timestamp{
 	
-	//Date time;
 	String initials;
 	
 	/****** CONSTRUCTORS ******/
@@ -55,7 +55,30 @@ public class Time_Stamp extends Timestamp{
 	 */
 	public static Time_Stamp stamp(String initials) {
 		long temp = new java.util.Date().getTime();
-		System.out.println(temp);
 		return new Time_Stamp(temp, initials);
+	}
+	
+	/**
+	 * @return A LocalDate object containing the date of the most recent Monday
+	 */
+	public static LocalDate getMondaysDate() {
+		LocalDate date = LocalDate.now();
+		int day = date.getDayOfWeek().getValue();
+		if (day > 1) {
+			int offset = day-1;
+			date = date.minusDays(offset);
+		}
+		return date;
+	}
+	
+	/**
+	 * @return
+	 */
+	public static String getMondaysDateAsString() {
+		return getMondaysDate().toString();
+	}
+	
+	public static boolean validateWeek(LocalDate mondayDate) {
+		return getMondaysDate().isEqual(mondayDate); 
 	}
 }
