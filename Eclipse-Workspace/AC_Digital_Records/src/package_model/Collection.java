@@ -1,5 +1,7 @@
 package package_model;
 
+import java.io.Serializable;
+
 import utility_classes.MyLinkedList;
 
 /**
@@ -7,7 +9,11 @@ import utility_classes.MyLinkedList;
  * @author jma_u
  *
  */
-public class Collection {
+public class Collection implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4757050862071691151L;
 	MyLinkedList<Animal> animals;
 	
 	public Collection() {
@@ -25,5 +31,13 @@ public class Collection {
 	public Collection(Animal animal) {
 		this.animals = new MyLinkedList<Animal>();
 		this.animals.add(animal);		
+	}
+	
+	public MyLinkedList<Animal> getAnimals(){
+		return this.animals;
+	}
+	
+	public void addAnimal(Animal animal) {
+		this.animals.add((Animal)animal);
 	}
 }

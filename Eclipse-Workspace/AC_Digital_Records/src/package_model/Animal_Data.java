@@ -1,5 +1,6 @@
 package package_model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -7,7 +8,11 @@ import java.time.LocalDate;
  * @author jma_u
  *
  */
-public class Animal_Data {
+public class Animal_Data implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 791719246074651526L;
 	private String name;
 	private String nickname;
 	private String species;

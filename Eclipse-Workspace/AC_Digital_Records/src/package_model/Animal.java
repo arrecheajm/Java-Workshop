@@ -1,5 +1,6 @@
 package package_model;
 
+import java.io.Serializable;
 import utility_classes.MyLinkedList;
 
 /**
@@ -8,7 +9,11 @@ import utility_classes.MyLinkedList;
  *
  */
 
-public class Animal {
+public class Animal implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6418701439545227987L;
 	private Animal_Data info;
 	private Diet diet;
 	private MyLinkedList<Diet_Week> dietLog;
@@ -132,8 +137,6 @@ public class Animal {
 	}
 	
 	/****** UTILITY ******/
-	public void validateDietLog() {
-		if (Time_Stamp.validateWeek((Diet_Week)((Time_Stamp) dietLog.get(dietLog.size()-1)).getMondaysDate());
-	}
+
 	
 }

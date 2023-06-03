@@ -1,5 +1,7 @@
 package package_model;
 
+import java.io.Serializable;
+
 import utility_classes.MyLinkedList;
 
 /**
@@ -12,7 +14,11 @@ import utility_classes.MyLinkedList;
 // TODO validate initials: Initials cannot be null or "", initials must be at least 2 characters, no more than 4.
 // TODO add fed by variable or make a new diet_week_item class?
 
-public class Diet {
+public class Diet implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1686610493409941578L;
 	private MyLinkedList<Food_Group> foodGroups;
 	private String notes;
 	private boolean locked;

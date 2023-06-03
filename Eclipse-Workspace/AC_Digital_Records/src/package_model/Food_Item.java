@@ -1,5 +1,7 @@
 package package_model;
 
+import java.io.Serializable;
+
 import utility_classes.MyLinkedList;
 
 /**
@@ -7,7 +9,11 @@ import utility_classes.MyLinkedList;
  * @author jma_u
  *
  */
-public class Food_Item {
+public class Food_Item implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2254919578924255313L;
 	private int numberOfAllowedOptions;
 	private String name;
 	private String notes;
@@ -32,11 +38,11 @@ public class Food_Item {
 	 * @throws Invalid_Number_Of_Options_Exception
 	 * @throws Invalid_Food_Entry_Name_Exception
 	 */
-	public Food_Item(String[] options) throws Invalid_Number_Of_Options_Exception, Invalid_Food_Entry_Name_Exception{
+	public Food_Item(String name, String notes, String[] options) throws Invalid_Number_Of_Options_Exception, Invalid_Food_Entry_Name_Exception{
 		if (options == null) {
 			throw new Invalid_Number_Of_Options_Exception("Null list passed to constructor");
 		}
-		setAll(null, null, options.length, createOptionList(options));
+		setAll(name, notes, options.length, createOptionList(options));
 	}
 	
 	/**

@@ -1,5 +1,7 @@
 package package_model;
 
+import java.io.Serializable;
+
 import utility_classes.MyLinkedList;
 
 /**
@@ -7,7 +9,11 @@ import utility_classes.MyLinkedList;
  * @author jma_u
  *
  */
-public class Food_Group {
+public class Food_Group implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -602514967201719666L;
 	private String name;
 	private String notes;
 	private MyLinkedList<Food_Item> foodItems;

@@ -1,5 +1,6 @@
 package package_model;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.time.LocalDate;
 
@@ -9,7 +10,7 @@ import java.time.LocalDate;
  *
  */
 @SuppressWarnings("serial")
-public class Time_Stamp extends Timestamp{
+public class Time_Stamp extends Timestamp implements Serializable{
 	
 	String initials;
 	

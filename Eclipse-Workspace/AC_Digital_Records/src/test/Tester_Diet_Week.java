@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import package_model.Time_Stamp;
 
-public class Diet_Week_Tester {
+public class Tester_Diet_Week {
 
 	public static void main(String[] args) {
 		long temp = new java.util.Date().getTime();

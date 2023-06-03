@@ -1,5 +1,7 @@
 package package_model;
 
+import java.io.Serializable;
+
 /**
  * A food entry for a particular food item. Entries have a name (name) and frequency String.
  * Frequency can be one of three names: Normal, low, rare. Also contains boolean to show if it entry
@@ -7,7 +9,9 @@ package package_model;
  * @author jma_u
  *
  */
-public class Food_Entry {
+public class Food_Entry implements Serializable {
+	
+	private static final long serialVersionUID = 8741336005180147101L;
 	public static final String DEFAULT_FREQUENCY = "Normal";
 	public static final String NORMAL_FREQUENCY = "Normal";
 	public static final String LOW_FREQUENCY = "Low";

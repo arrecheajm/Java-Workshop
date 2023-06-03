@@ -9,8 +9,8 @@ public class Utility
 {
 	// CONSTANTS
 	public static final String NAME = "JUAN ARRECHEA";
-	public static final String COURSE = "Basic Data Structures and Algorithms";
-	public static final String SECTION = "Mon/Wed 11:00am - 1:00pm";
+	public static final String COURSE = "";
+	public static final String SECTION = "";
 
 	// DESCRIPTION:		Print author information for start of program
 	// PRE-CONDITIONS:	All parameters are given valid values

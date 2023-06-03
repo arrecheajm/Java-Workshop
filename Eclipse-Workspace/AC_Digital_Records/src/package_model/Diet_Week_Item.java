@@ -1,6 +1,6 @@
 package package_model;
 
-//TODO add comment section!!!!
+
 public class Diet_Week_Item extends Diet{
 	private boolean completed;
 	private Time_Stamp completeTime;

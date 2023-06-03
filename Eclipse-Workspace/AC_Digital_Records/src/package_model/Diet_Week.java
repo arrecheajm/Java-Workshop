@@ -1,5 +1,6 @@
 package package_model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
@@ -7,7 +8,12 @@ import java.time.LocalDate;
  * @author jma_u
  *
  */
-public class Diet_Week {
+public class Diet_Week implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2388063836606102083L;
+
 	public static final int DAYS_IN_A_WEEK = 7;
 	
 	LocalDate mondayDate;
