@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f7aebd5d-4fe1-4e69-840b-d6b3264f3c0e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/.idea/01-constructor-injection.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/src/main/java/com/luv2code/springcoredemo/Coach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/src/main/java/com/luv2code/springcoredemo/CricketCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/src/main/java/com/luv2code/springcoredemo/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/src/main/java/com/luv2code/springcoredemo/SpringcoredemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/01-constructor-injection/springcoredemo/src/test/java/com/luv2code/springcoredemo/SpringcoredemoApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/src/main/java/com/luv2code/springcoredemo/Coach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/src/main/java/com/luv2code/springcoredemo/CricketCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/src/main/java/com/luv2code/springcoredemo/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/src/main/java/com/luv2code/springcoredemo/SpringcoredemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../02-spring-boot-spring-core/02-component-scanning/springcoredemo/src/test/java/com/luv2code/springcoredemo/SpringcoredemoApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2TwuiYcNho3Poaz0tbVIERdDJZv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f7aebd5d-4fe1-4e69-840b-d6b3264f3c0e" name="Changes" comment="" />
+      <created>1691966592019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691966592019</updated>
+    </task>
+    <servers />
+  </component>
+</project>
