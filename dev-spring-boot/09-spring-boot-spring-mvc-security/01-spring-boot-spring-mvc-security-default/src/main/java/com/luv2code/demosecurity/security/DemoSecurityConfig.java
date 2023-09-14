@@ -2,10 +2,13 @@ package com.luv2code.demosecurity.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.provisioning.UserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
+
+import java.util.concurrent.ExecutionException;
 
 @Configuration
 public class DemoSecurityConfig {
@@ -33,4 +36,25 @@ public class DemoSecurityConfig {
 
         return  new InMemoryUserDetailsManager(john, mary, susan);
     }
+
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
+        http.authorizeHttpRequests(configurer ->
+                configurer
+                        .anyRequest().authenticated()
+        )
+                .formLogin(form ->
+                        form
+                                .loginPage("/showMyLoginPage")
+                                .loginProcessingUrl("/authenticateTheUser") // No controller required for this, Spring handles it for me
+                                .permitAll() //anyone can access without login
+                )
+                .logout(logout -> logout.permitAll()
+                        );
+
+        return http.build();
+
+    }
+
 }
