@@ -1,7 +1,10 @@
 USE `employee_directory`;
 
+DROP TABLE IF EXISTS `roles`;
+DROP TABLE IF EXISTS `members`;
 DROP TABLE IF EXISTS `authorities`;
 DROP TABLE IF EXISTS `users`;
+
 
 --
 -- Table structure for table `users`
