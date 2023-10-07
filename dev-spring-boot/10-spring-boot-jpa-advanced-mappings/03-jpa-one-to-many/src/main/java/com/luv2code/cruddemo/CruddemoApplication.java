@@ -1,6 +1,7 @@
 package com.luv2code.cruddemo;
 
 import com.luv2code.cruddemo.DAO.AppDAO;
+import com.luv2code.cruddemo.entity.Course;
 import com.luv2code.cruddemo.entity.Instructor;
 import com.luv2code.cruddemo.entity.InstructorDetail;
 import jakarta.persistence.criteria.CriteriaBuilder;
@@ -8,6 +9,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+
+import javax.swing.plaf.synth.SynthTextAreaUI;
 
 @SpringBootApplication
 public class CruddemoApplication {
@@ -25,7 +28,50 @@ public class CruddemoApplication {
 //			deleteInstructor(appDAO);
 //			findInstructorDetail(appDAO);
 //			deleteInstructorDetail(appDAO);
+			createInstructorWithCourses(appDAO);
 		};
+	}
+
+	private void createInstructorWithCourses(AppDAO appDAO) {
+
+		// create the instructor
+		Instructor tempInstructor = new Instructor("Chad", "Darby", "darby@luv2code.com");
+
+		// create instructor detail
+		InstructorDetail tempInstructorDetail = new InstructorDetail("http//www.luv2code.com/youtube", "luv 2 code");
+
+		// associate the objects
+		tempInstructor.setInstructorDetail(tempInstructorDetail);
+
+
+		Instructor tempInstructor2 = new Instructor("Juan", "Arrechea", "juan@luv2code.com");
+
+		// create instructor detail
+		InstructorDetail tempInstructorDetail2 = new InstructorDetail("http//www.luv2code.com/youtube", "geeking");
+
+		// associate the objects
+		tempInstructor2.setInstructorDetail(tempInstructorDetail2);
+
+		System.out.println("Saving the instructor: " + tempInstructor2);
+		appDAO.save(tempInstructor2);
+		System.out.println("Done");
+
+		// create some courses
+		Course tempCourse1  = new Course("Air Guitar - The Ultimate Guide");
+		Course tempCourse2  = new Course("The Pinball Master class");
+
+		tempInstructor.add(tempCourse1);
+		tempInstructor.add(tempCourse2);
+
+		// save the instructor
+		//
+		// NOTE: this will ALSO save the details object
+		// because of CascadeType.ALL
+		System.out.println("Saving the instructor: " + tempInstructor);
+		System.out.println("The courses: "+tempInstructor.getCourses());
+		appDAO.save(tempInstructor);
+		System.out.println("Done");
+
 	}
 
 	private void deleteInstructorDetail(AppDAO appDAO) {
